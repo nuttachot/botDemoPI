@@ -13,7 +13,7 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.use(bodyParser.json());
-/*
+
 var serviceAccount = require("./botdbkey.json");
  
 admin.initializeApp({
@@ -37,7 +37,7 @@ function addUserMessage(userId, message) {
   console.log("A new Todo item with ID " + itemId + " is created.");  
   return itemId;
 }
-*/
+
 server.post('/',function (request,response) {
   const agent = new WebhookClient({ request, response });
   
@@ -48,7 +48,6 @@ server.post('/',function (request,response) {
     const sum = number + number1;
     agent.add('ผลบวกคือ '+ sum);
 	//const userId = request.body.originalDetectIntentRequest.payload.data.source.userId;
-	//addUserMessage(userId, "สวัสดี Firebase");
 	
 	
   }
